@@ -21,7 +21,7 @@ const packagesData = [
     duration: '5 Nights / 6 Days',
     price: '₹18,500',
     rating: 4.8,
-    image: 'https://images.unsplash.com/photo-1609137144814-722a8682cd98?auto=format&fit=crop&w=600&q=80',
+    image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUUy4Sov53lku6WhsZpnl1K396PUxGJDE5Pg&s',
     destinations: 'Bodhgaya, Sarnath, Nalanda, Rajgir',
     bestSeason: 'October to March',
     groupSize: '2 - 12 Pax',
@@ -219,7 +219,7 @@ Please share:
 // ==========================================
 // 3. MAIN COMPONENT LAYOUT
 // ==========================================
-const TourPackagesPage = () => {
+const TourPackages = () => {
   const location = useLocation();
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
@@ -465,4 +465,4 @@ const TourPackagesPage = () => {
   );
 };
 
-export default TourPackagesPage;
+export default TourPackages;
