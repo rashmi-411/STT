@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { 
-  Phone, MessageSquare, Award, ShieldCheck, Clock, MapPin, DollarSign, User, Briefcase, Plane, Building, Compass, Heart, Sparkles, ArrowRight, Star
+  Phone, MessageSquare, Award
 } from 'lucide-react';
 
 import WelcomeSection from '../section/welcome_section';

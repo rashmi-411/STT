@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { 
   ShieldCheck, CheckCircle, Radio, Users, 
-  MapPin, Sliders, Gem, Layers, HelpCircle, 
-  ChevronDown, ArrowRight, Zap, ShieldAlert
+  Sliders, Gem, Layers, HelpCircle, 
+  ChevronDown, ArrowRight, Zap
 } from 'lucide-react';
 
 const OurAdvantage = () => {

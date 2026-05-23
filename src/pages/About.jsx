@@ -1,5 +1,4 @@
 import { ShieldCheck, Award } from 'lucide-react';
-import { useState } from 'react';
 
 const About = () => {
   return (

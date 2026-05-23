@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { MapPin, User, Phone, Clock, ShieldCheck, DollarSign } from 'lucide-react';
 
 const WhyChoose = () => {

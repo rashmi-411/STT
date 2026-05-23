@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { User, Briefcase, ArrowRight } from 'lucide-react';
 
 const FleetShowcase = () => {

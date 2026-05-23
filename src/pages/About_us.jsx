@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Award, ShieldCheck, Clock, Users, Compass, 
-  Target, Eye, CheckCircle2, ChevronRight, Briefcase
+  Award, ShieldCheck, Clock, Compass, 
+  CheckCircle2, ChevronRight, Briefcase
 } from 'lucide-react';
 
 const AboutUs = () => {

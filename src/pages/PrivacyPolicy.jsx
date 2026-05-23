@@ -1,61 +1,61 @@
 import React, { useState, useMemo } from 'react';
 import { 
   Shield, Eye, Lock, FileText, Search, 
-  ChevronDown, HelpCircle, CheckCircle, Scale, 
+  ChevronDown, CheckCircle, Scale, 
   RefreshCw, Server, UserCheck, AlertTriangle 
 } from 'lucide-react';
+
+// Structured Policy Data Model matching Sonu Tour and Travels operations
+const policyData = [
+  {
+    id: 0,
+    icon: Eye,
+    title: "1. Information We Collect",
+    tagline: "What clear datasets are compiled during your booking lifecycle.",
+    content: "We collect personal parameters required to execute legal travel operations cleanly. This includes individual names, phone tracking indices, corporate email points, precise pickup/drop-off geographic coordinates, billing frameworks, and target itinerary specifics. For corporate clients, statutory registration tags or GST identification markers are also indexed securely."
+  },
+  {
+    id: 1,
+    icon: Server,
+    title: "2. Real-Time Telematics & GPS Tracking",
+    tagline: "Telemetry policies regarding our active fleet operations.",
+    content: "To guarantee operational efficiency, client safety, and optimal route generation, our fleet utilizes embedded satellite GPS and onboard telematics. Geographic data endpoints are continuously transmitted to our central servers. This location positioning history is kept securely for compliance audits and corporate safety reviews."
+  },
+  {
+    id: 2,
+    icon: Lock,
+    title: "3. Data Security & Encryption Standards",
+    tagline: "Our engineering approaches to securing your private files.",
+    content: "Your operational profiles are protected with industrial transport encryption systems. We apply physical firewalls, modern network perimeter restrictions, and strict access controls. Access to user location data and identity matrix logs is locked exclusively to authorized dispatch controllers and verification managers."
+  },
+  {
+    id: 3,
+    icon: UserCheck,
+    title: "4. Information Sharing & Third-Party Metrics",
+    tagline: "Clear disclosures regarding external vendor interactions.",
+    content: "Sonu Tour and Travels does not trade or monetize your operational logs. Your itinerary points are shared strictly with assigned professional chauffeurs and regional dispatch hubs to complete the journey. When necessary, encrypted billing signatures are transmitted securely to payment gateways or your enterprise's processing systems."
+  },
+  {
+    id: 4,
+    icon: Scale,
+    title: "5. Legal Obligations & Statutory Compliance",
+    tagline: "Procedures followed under local statutory regulatory mandates.",
+    content: "We reserve the right to disclose personal data endpoints if explicitly ordered by valid legal processes or state security divisions (such as regional highway authorities and government event security wings). This protocol is enforced to safeguard public safety, check compliance rules, or defend corporate assets."
+  },
+  {
+    id: 5,
+    icon: RefreshCw,
+    title: "6. Operational Updates & Policy Alterations",
+    tagline: "Tracking evolutionary patches to this privacy structure.",
+    content: "This operational framework may undergo routine optimizations to match evolving logistics tech, security mandates, or state transport adjustments. We recommend tracking this portal regularly. Continued deployment of our fleet networks post-update forms a constructive confirmation of our policy parameters."
+  }
+];
 
 const PrivacyPolicy = () => {
   // State for tracking active dropdown elements
   const [openSection, setOpenSection] = useState(0);
   // State for dynamic Client-side filtering
   const [searchQuery, setSearchQuery] = useState('');
-
-  // Structured Policy Data Model matching Sonu Tour and Travels operations
-  const policyData = [
-    {
-      id: 0,
-      icon: Eye,
-      title: "1. Information We Collect",
-      tagline: "What clear datasets are compiled during your booking lifecycle.",
-      content: "We collect personal parameters required to execute legal travel operations cleanly. This includes individual names, phone tracking indices, corporate email points, precise pickup/drop-off geographic coordinates, billing frameworks, and target itinerary specifics. For corporate clients, statutory registration tags or GST identification markers are also indexed securely."
-    },
-    {
-      id: 1,
-      icon: Server,
-      title: "2. Real-Time Telematics & GPS Tracking",
-      tagline: "Telemetry policies regarding our active fleet operations.",
-      content: "To guarantee operational efficiency, client safety, and optimal route generation, our fleet utilizes embedded satellite GPS and onboard telematics. Geographic data endpoints are continuously transmitted to our central servers. This location positioning history is kept securely for compliance audits and corporate safety reviews."
-    },
-    {
-      id: 2,
-      icon: Lock,
-      title: "3. Data Security & Encryption Standards",
-      tagline: "Our engineering approaches to securing your private files.",
-      content: "Your operational profiles are protected with industrial transport encryption systems. We apply physical firewalls, modern network perimeter restrictions, and strict access controls. Access to user location data and identity matrix logs is locked exclusively to authorized dispatch controllers and verification managers."
-    },
-    {
-      id: 3,
-      icon: UserCheck,
-      title: "4. Information Sharing & Third-Party Metrics",
-      tagline: "Clear disclosures regarding external vendor interactions.",
-      content: "Sonu Tour and Travels does not trade or monetize your operational logs. Your itinerary points are shared strictly with assigned professional chauffeurs and regional dispatch hubs to complete the journey. When necessary, encrypted billing signatures are transmitted securely to payment gateways or your enterprise's processing systems."
-    },
-    {
-      id: 4,
-      icon: Scale,
-      title: "5. Legal Obligations & Statutory Compliance",
-      tagline: "Procedures followed under local statutory regulatory mandates.",
-      content: "We reserve the right to disclose personal data endpoints if explicitly ordered by valid legal processes or state security divisions (such as regional highway authorities and government event security wings). This protocol is enforced to safeguard public safety, check compliance rules, or defend corporate assets."
-    },
-    {
-      id: 5,
-      icon: RefreshCw,
-      title: "6. Operational Updates & Policy Alterations",
-      tagline: "Tracking evolutionary patches to this privacy structure.",
-      content: "This operational framework may undergo routine optimizations to match evolving logistics tech, security mandates, or state transport adjustments. We recommend tracking this portal regularly. Continued deployment of our fleet networks post-update forms a constructive confirmation of our policy parameters."
-    }
-  ];
 
   // Client-side real-time matching engine
   const filteredPolicy = useMemo(() => {
